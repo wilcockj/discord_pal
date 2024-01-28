@@ -63,9 +63,9 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if m.Author.ID == s.State.User.ID {
 		return
 	}
-	// If the message is "ping" reply with "Pong!"
+
+	// check if message is a palstring
 	if isPalString(m.Content) {
-		//s.ChannelMessageSend(m.ChannelID, "PalJohn")
 		s.ChannelMessageSendReply(m.ChannelID, "PalJohn", m.Reference())
 	}
 }
