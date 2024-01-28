@@ -68,11 +68,6 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 		//s.ChannelMessageSend(m.ChannelID, "PalJohn")
 		s.ChannelMessageSendReply(m.ChannelID, "PalJohn", m.Reference())
 	}
-
-	// If the message is "pong" reply with "Ping!"
-	if m.Content == "pong" {
-		s.ChannelMessageSendReply(m.ChannelID, "Ping!", m.MessageReference)
-	}
 }
 
 func isPalString(s string) bool {
