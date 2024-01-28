@@ -66,7 +66,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 	// If the message is "ping" reply with "Pong!"
 	if isPalString(m.Content) {
 		//s.ChannelMessageSend(m.ChannelID, "PalJohn")
-		s.ChannelMessageSendReply(m.ChannelID, "❤️PalJohn❤️", m.Reference())
+		s.ChannelMessageSendReply(m.ChannelID, "PalJohn", m.Reference())
 	}
 
 	// If the message is "pong" reply with "Ping!"
